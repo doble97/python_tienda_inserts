@@ -113,3 +113,6 @@ alter table Clientes add apellidos varchar(60);
 alter table Clientes add f_alta date;
 alter table Clientes add f_nac date;
 alter table Clientes add dni varchar(9) UNIQUE;
+-- Cambiando tabla Trabajadores
+alter table Trabajadores add apellidos varchar(100);
+alter table Trabajadores modify column sueldo decimal(6,2) default 1000.00;

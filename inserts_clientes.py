@@ -12,7 +12,8 @@ bbdd = mysql.connector.connect(
 mycursor= bbdd.cursor()
 sql = 'insert into Clientes (nombre, apellidos,dni, f_nac, f_alta) values (%s, %s, %s,%s,%s )'
 
-with open('csv/users.csv') as file:
+#Clientes naceran antes del 2000 y estaran dados de alta desde el 2018 que se abre la empresa
+with open('csv/clientes.csv') as file:
     csvreader = csv.reader(file)
     header = []
     header = next(csvreader)
